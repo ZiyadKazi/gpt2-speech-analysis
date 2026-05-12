@@ -1,0 +1,21 @@
+# Data files (too large for GitHub)
+data/raw/*.mp3
+data/raw/*.mp4
+data/raw/*.wav
+data/processed/*.npy
+data/processed/*.csv
+
+# Model outputs (large)
+outputs/embeddings/*.npy
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Conda
+*.egg-info/
+.env
+
+# Mac
+.DS_Store
