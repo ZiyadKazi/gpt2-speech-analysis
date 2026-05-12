@@ -19,6 +19,12 @@ Do speakers slow down during semantically rich moments?
 ## Data
 - TED Talk: Brené Brown "The Power of Vulnerability" (first 5 minutes)
 
+## Extensions
+- **Layer comparison analysis**: Extract embeddings from layers 1, 8, 16, 24, 32, 37
+  and compare how well each layer's semantic structure correlates with speech rate.
+  This tests the hypothesis that upper-middle layers capture richer semantics than
+  the final layer for downstream prediction tasks.
+
 ## Author
 Ziyad Kazi
 Hayden Lab, Baylor College of Medicine
