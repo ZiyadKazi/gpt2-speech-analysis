@@ -32,8 +32,38 @@ Words: 1386
 Total words analyzed: 2,264 across two speakers, two genres (TED Talk vs commencement),
 two content domains (vulnerability/social science vs entrepreneurship/culture).
 
-## Extensions
-- **Layer comparison analysis**: Extract embeddings from layers 1, 8, 16, 24, 32, 37
-  and compare how well each layer's semantic structure correlates with speech rate.
-  This tests the hypothesis that upper-middle layers capture richer semantics than
-  the final layer for downstream prediction tasks.
+## Discussion
+
+### What we found
+Semantic surprisal positively predicts both word duration (r=0.12 after controls, p<0.001)
+and pre-word silence (r=0.08, p<0.001), consistent across two speakers and two speech genres.
+
+### Problems addressed
+- **Word length confound:** surprising words tend to be longer. Addressed with partial
+  correlation controlling for word length — effect persists but shrinks (r=0.33 → r=0.12),
+  confirming a genuine surprisal effect above and beyond physical word length.
+- **Context length artifact:** distance-from-mean embeddings were inflated by sentence
+  position. Addressed by switching to surprisal, which uses GPT-2's prediction mechanism
+  directly and is position-independent.
+- **Noisy pre-gap measurements:** WhisperX alignment isn't perfect at word boundaries,
+  adding noise to pre-gap estimates.
+
+### Limitations
+- Only two highly practiced public speakers — may not generalize to spontaneous conversation
+- Syllable count and other variables may be a better control than character length
+- Surprisal does not equal semantic richness exactly — unexpected words aren't always semantically rich
+
+### Next steps
+- Control for syllable count instead of character length
+- Layer comparison: does surprisal from layer 1 vs 18 vs 36 predict timing differently?
+- Apply to more speakers and spontaneous speech genres
+
+### Connection to Hayden Lab research
+This project is a behavioral proof of concept for the neural analysis at Hayden Lab.
+The core GPT-2 Large pipeline built here, transcription, word-level alignment, and
+layer 36 embedding extraction, is the same infrastructure used in Franch et al. (2026)
+to predict hippocampal single-neuron firing rates during naturalistic speech. The real
+project extends that work by adding social gaze as a modulating variable, asking whether
+hippocampal semantic encoding is stronger during moments of social visual attention,
+connecting to broader questions about how the brain binds social cues and semantic content
+during naturalistic human interaction.

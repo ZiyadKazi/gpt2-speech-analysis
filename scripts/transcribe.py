@@ -7,9 +7,6 @@ Purpose: Transcribe an audio file and extract word-level timestamps
 Usage:
     python scripts/transcribe.py --audio <path_to_audio>
 
-Example:
-    python scripts/transcribe.py --audio data/raw/brenebrown_5min.mp3
-
 Input:  any .mp3 audio file
 Output: data/processed/<audio_name>_transcript.json
 """

@@ -1,0 +1,7 @@
+label,x,y,r,p,n,sig,direction
+brenebrown_surprisal_vs_duration,richness,duration,0.3399,0.0,878,***,positive
+brenebrown_surprisal_vs_pregap,richness,pre_gap,0.0609,0.071257,878,ns,positive
+benhorowitz_surprisal_vs_duration,richness,duration,0.3236,0.0,1386,***,positive
+benhorowitz_surprisal_vs_pregap,richness,pre_gap,0.1014,0.000155,1386,***,positive
+combined_surprisal_vs_duration,richness,duration,0.3299,0.0,2264,***,positive
+combined_surprisal_vs_pregap,richness,pre_gap,0.0831,7.6e-05,2264,***,positive

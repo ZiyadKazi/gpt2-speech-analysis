@@ -1,0 +1,7 @@
+label,x,y,control,r,p,n,sig,direction
+brenebrown_surprisal_vs_duration_controlling_wordlength,richness,duration,word_length,0.0833,0.013599,878,*,positive
+brenebrown_surprisal_vs_pregap_controlling_wordlength,richness,pre_gap,word_length,0.0733,0.029802,878,*,positive
+benhorowitz_surprisal_vs_duration_controlling_wordlength,richness,duration,word_length,0.1455,0.0,1386,***,positive
+benhorowitz_surprisal_vs_pregap_controlling_wordlength,richness,pre_gap,word_length,0.0914,0.000655,1386,***,positive
+combined_surprisal_vs_duration_controlling_wordlength,richness,duration,word_length,0.1219,0.0,2264,***,positive
+combined_surprisal_vs_pregap_controlling_wordlength,richness,pre_gap,word_length,0.0823,8.8e-05,2264,***,positive
